@@ -31,4 +31,20 @@ class ProjectController extends Controller
 
         return "Guardado";
     }
+
+    public function updateProject()
+    {
+        $project = Project::find(2);
+        $project->name = 'Proyecto de tecnología';
+        $project->save();
+
+        return "Actualizado";
+    }
+
+    public function updateNameAllProjectsInactive()
+    {
+        Project::where('is_active', 0)
+            ->update(['name' => 'Nuevo nombre al proyecto ♥']);
+        return "Actualizaodos nombre de proyectos";
+    }
 }
