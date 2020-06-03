@@ -47,4 +47,14 @@ class ProjectController extends Controller
             ->update(['name' => 'Nuevo nombre al proyecto ♥']);
         return "Actualizaodos nombre de proyectos";
     }
+    public function deleteProject()
+    {
+        $project = Project::where('project_id', '>', 15)->delete();
+        return "Registros eliminados";
+    }
+    public function deleteFirstTenProject()
+    {
+        $project = Project::take(10)->delete();
+        return "Primeros 10 Registros eliminados";
+    }
 }

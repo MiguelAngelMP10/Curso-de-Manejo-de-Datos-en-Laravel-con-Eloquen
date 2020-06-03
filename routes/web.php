@@ -21,3 +21,6 @@ Route::get('getTenProjects', 'ProjectController@getTenProjects');
 Route::get('insertNewProject', 'ProjectController@insertProject');
 Route::get('updateProject', 'ProjectController@updateProject');
 Route::get('updateNameAllProjectsInactive', 'ProjectController@updateNameAllProjectsInactive');
+Route::get('deleteProject', 'ProjectController@deleteProject');
+
+Route::get('deleteFirstTenProject', 'ProjectController@deleteFirstTenProject');
