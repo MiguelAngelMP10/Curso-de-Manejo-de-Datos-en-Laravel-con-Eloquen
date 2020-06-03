@@ -2,11 +2,11 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\User;
+use App\City;
 use Faker\Generator as Faker;
 
-$factory->define(User::class, function (Faker $faker) {
+$factory->define(City::class, function (Faker $faker) {
     return [
-        'name' => substr($faker->name, 0, 20),
+        'name' => $faker->city
     ];
 });
